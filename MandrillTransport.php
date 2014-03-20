@@ -127,10 +127,7 @@ class MandrillTransport extends AbstractTransport
 			$message['html'] = $this->_cakeEmail->message('html');
 		}
 
-		if ($this->_cakeEmail->emailFormat() === 'text' || $this->_cakeEmail->emailFormat() === 'both') {
-			$message['text'] = $this->_cakeEmail->message('text');
-		}
-
+		
 		$json["message"] = $message;
 
 		return $json;
